@@ -1,0 +1,112 @@
+/* Definição das variáveis de cores */
+:root {
+    --cor-preta: #000000;
+    --cor-vermelha: #e63946;
+    --cor-branca: #ffffff;
+    --cor-cinza-claro: #f1f1f1;
+    --cor-cinza-escuro: #444444;
+  }
+  
+  /* Resetando estilos para garantir consistência */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: var(--cor-branca);
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  button {
+    background-color: var(--cor-vermelha);
+    color: var(--cor-branca);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d92e38; /* Um tom mais escuro de vermelho */
+  }
+  
+  input, select {
+    background-color: var(--cor-cinza-claro);
+    color: var(--cor-preta);
+    border: 1px solid var(--cor-cinza-escuro);
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: var(--cor-vermelha);
+  }
+  
+  /* Formulário */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--cor-cinza-escuro);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  form input,
+  form button {
+    margin-bottom: 15px;
+  }
+  
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Painel do Admin */
+  .admin-dashboard {
+    background-color: var(--cor-preta);
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .admin-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-dashboard li {
+    padding: 10px;
+    background-color: var(--cor-cinza-escuro);
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .admin-dashboard li:hover {
+    background-color: var(--cor-vermelha);
+  }
+  
