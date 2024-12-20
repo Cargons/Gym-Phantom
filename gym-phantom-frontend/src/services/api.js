@@ -1,8 +1,22 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const api = axios.create({
+  baseURL: 'http://localhost:5000/api', // Substitua pelo IP do servidor
+});
 
-export const login = (data) => API.post('/auth/login', data);
-export const registerAdmin = (data) => API.post('/auth/register-admin', data);// Rota de registro do admin
-export const fetchAdminData = (token) =>
-  API.get('/admin/data', { headers: { Authorization: `Bearer ${token}` } }); 
+export const registerAdmin = async (data) => {
+  return await api.post('/auth/register-admin', data);
+};
+
+export const login = async (data) => {
+  return await api.post('/auth/login', data);
+};
+
+export const fetchAdminData = async (token) => {
+  return await api.get('/auth/admin-data', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+};
+
